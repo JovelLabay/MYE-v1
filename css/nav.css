@@ -1,0 +1,62 @@
+#navigation {
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+.shadow {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.2s ease;
+}
+
+#logo {
+    height: 80px;
+    width: 80px;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav div ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    list-style-type: none;
+}
+
+.nav div ul li a {
+    font-size: 14px;
+    font-weight: bold;
+    transition: 300ms;
+    text-decoration: none;
+    color: var(--main-dark);
+}
+
+.active {
+    color: var(--main-color) !important;
+}
+
+.inactive {
+    color: var(--main-dark) !important;
+}
+
+.nav div ul li #home:hover,
+.nav div ul li #pro-ser:hover,
+.nav div ul li #about:hover,
+.nav div ul li #contact:hover {
+    cursor: pointer;
+    color: var(--main-color);
+}
+
+.nav div ul li #login:last-child {
+    background-color: var(--main-color);
+    color: #fff;
+    padding: 10px 30px;
+    border-radius: 9999px;
+}

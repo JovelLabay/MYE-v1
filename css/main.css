@@ -1,0 +1,66 @@
+/* GLOBAL CONFIG */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+    color: var(--main-dark);
+}
+
+/* GLOBAL MARGIN */
+.mt-1 {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* GLOBAL COLORS */
+:root {
+    --main-color: #0973BA;
+    --main-color-light: #D4ECFF;
+    --secondary-color: #0D77BE;
+    --secondary-color-bg: #0B75BC;
+
+    --main-dark: #2D2D2D;
+    --main-dark-light: #545454;
+    --secondary-dark: #3D3D3D;
+
+    --border-light: #B8C6D0;
+
+    --green-color: #4ED7BB;
+    --red-color: #F55656;
+    --yellow-color: #FEC925;
+    --blue-color: #349DE2;
+}
+
+/* TAB VIEW */
+/* @media (max-width: 768px) {
+    .mt-1 {
+        margin: 0 30px;
+    }
+} */
+
+/* MOBILE VIEW */
+/* @media only screen and (max-width: 1200px) {
+    .mt-1 {
+        margin: 0 50px;
+    }
+} */
+
+/* Tablet */
+/* @media only screen and (max-width: 992px) {
+    .mt-1 {
+        margin: 0 30px;
+    }
+} */
+
+/* Mobile */
+/* @media only screen and (max-width: 576px) {
+    .mt-1 {
+        margin: 0 20px;
+    }
+} */
