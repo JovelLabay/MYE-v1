@@ -69,62 +69,63 @@
             </div>
         </div>
 
-        <div class="parallax-container">
-            <div id="carouselExampleIndicators" class="carousel slide">
-                <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
-                        class="active" aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-                        aria-label="Slide 2"></button>
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-                        aria-label="Slide 3"></button>
-                </div>
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <div id="one">
-                            <div class="item slide-content">
-                                <div>
-                                    <h1>Personalized Project</h1>
-                                    <p>Our dedication to personalized
-                                        service is what sets us apart.
-                                    </p>
-                                    <button>Learn more</button>
+        <div class="parent-curve">
+            <div class="parallax-container">
+
+                <div id="carouselExampleIndicators" class="carousel slide">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                            class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                            aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div id="one">
+                                <div class="item slide-content">
+                                    <div>
+                                        <h1>Personalized Project</h1>
+                                        <p>Our dedication to personalized
+                                            service is what sets us apart.
+                                        </p>
+                                        <button>Learn more</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div id="two">
-                            <div class="item slide-content">
-                                <div>
-                                    <h1>A Cloud built by Filipinos,
-                                        for Filipinos</h1>
-                                    <p>At the heart of our brand is a
-                                        commitment to quality and reliability.
-                                    </p>
-                                    <button>Learn more</button>
+                        <div class="carousel-item">
+                            <div id="two">
+                                <div class="item slide-content">
+                                    <div>
+                                        <h1>A Cloud built by Filipinos,
+                                            for Filipinos</h1>
+                                        <p>At the heart of our brand is a
+                                            commitment to quality and reliability.
+                                        </p>
+                                        <button>Learn more</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div id="three">
-                            <div class="item slide-content">
-                                <div>
-                                    <h1>Powered by cutting-edge
-                                        latest cloud technology</h1>
-                                    <p>Our dedication to personalized
-                                        service is what sets us apart.
-                                    </p>
-                                    <button>Learn more</button>
+                        <div class="carousel-item">
+                            <div id="three">
+                                <div class="item slide-content">
+                                    <div>
+                                        <h1>Powered by cutting-edge
+                                            latest cloud technology</h1>
+                                        <p>Our dedication to personalized
+                                            service is what sets us apart.
+                                        </p>
+                                        <button>Learn more</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-
-            <div class="circle"></div>
         </div>
 
         <div class="part-7">
@@ -460,7 +461,7 @@
                         <input type="submit" value="Send" id="send">
                     </form>
 
-                    <button title="Up" class="scroll-up">
+                    <button title="Up" class="up-btn">
                         <i class="fa-solid fa-chevron-up" style="color: white; font-size: 20px;"></i>
                     </button>
                 </div>
@@ -483,6 +484,18 @@
     <!-- CUSTOM SCRIPTS -->
     <script type="module" src="/js/main.js"></script>
     <script type="module" src="/js/index.js"></script>
+    <svg style="visibility: hidden;position: absolute;" width="0" height="0" xmlns="http://www.w3.org/2000/svg"
+        version="1.1">
+        <defs>
+            <filter id="parent-curve">
+                <feGaussianBlur in="SourceGraphic" stdDeviation="8" result="blur"></feGaussianBlur>
+                <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9"
+                    result="goo">
+                </feColorMatrix>
+                <feComposite in="SourceGraphic" in2="goo" operator="atop"></feComposite>
+            </filter>
+        </defs>
+    </svg>
 
 </body>
 

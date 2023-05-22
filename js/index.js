@@ -71,46 +71,33 @@ pop3.addEventListener("mouseout", () => {
   document.querySelector("#dot-3-round").style.display = "none";
 });
 
-const circle = document.querySelector(".circle");
-const bgImage = document.querySelector(".bg-image");
-
-let scrollCount = 0;
-let isImageVisible = false;
+const circle = document.querySelector(".carousel");
 
 const handleScroll = function () {
-  scrollCount++;
+  const scrollTop = window.pageYOffset;
 
-  if (scrollCount >= 2 && !isImageVisible) {
-    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    const windowHeight = window.innerHeight;
-    const circleSize = 50 + (scrollTop / windowHeight) * 2000;
+  if (scrollTop < 520) {
+    circle.classList.remove("hexa2");
 
-    circle.style.width = `${circleSize}px`;
-    circle.style.height = `${circleSize}px`;
+    circle.classList.add("hexa1");
+  } else if (scrollTop < 720) {
+    circle.classList.remove("hexa1");
+    circle.classList.remove("hexa3");
 
-    const imageRect = bgImage.getBoundingClientRect();
-    const imageTop = imageRect.top;
-    const imageHeight = imageRect.height;
-    const imageBottom = imageTop + imageHeight;
+    circle.classList.add("hexa2");
+  } else if (scrollTop < 920) {
+    circle.classList.remove("hexa2");
+    circle.classList.remove("hexa4");
 
-    if (imageTop >= 0 && imageBottom <= windowHeight) {
-      isImageVisible = true;
-      window.removeEventListener("scroll", handleScroll);
-    }
+    circle.classList.add("hexa3");
+  } else if (scrollTop < 1020) {
+    circle.classList.remove("hexa3");
+
+    circle.classList.add("hexa4");
   }
 };
 
 window.addEventListener("scroll", handleScroll);
-
-const scrollUp = document.querySelector(".scroll-up");
-
-scrollUp.addEventListener("click", () => {
-  window.scrollTo({
-    top: 0,
-    left: 0,
-    behavior: "smooth",
-  });
-});
 
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
@@ -126,3 +113,23 @@ const observer = new IntersectionObserver((entries) => {
 
 const hiddenElements = document.querySelectorAll(".animate");
 hiddenElements.forEach((el) => observer.observe(el));
+
+const upBtn = document.querySelector(".up-btn");
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 400) {
+    upBtn.classList.add("show-up-btn");
+
+    const scrollUp = document.querySelector(".show-up-btn");
+
+    scrollUp.addEventListener("click", () => {
+      window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: "smooth",
+      });
+    });
+  } else {
+    upBtn.classList.remove("show-up-btn");
+  }
+});

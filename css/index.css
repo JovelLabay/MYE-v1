@@ -145,22 +145,52 @@
     width: 100%;
     height: 100%;
     background-image: url('/public/images/bg-join-2.png');
-    /* Add the path to your background image */
     background-size: cover;
     background-position: center;
 }
 
-.circle {
+.hexa1 {
+    clip-path: polygon(40% 34%, 51% 34%, 56% 46%, 52% 59%, 40% 59%, 35% 46%);
+    height: 100%;
+    width: 100%;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 400px;
-    height: 400px;
-    border-radius: 50%;
-    background-color: transparent;
-    box-shadow: 0 0 0 9999px white;
-    transition: width 4s ease-out, height 4s ease-out;
+    transition: 1s ease-out
+}
+
+.hexa2 {
+    clip-path: polygon(38% 23%, 55% 23%, 62% 41%, 55% 61%, 39% 61%, 31% 41%);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 1s ease-out
+}
+
+.hexa3 {
+    clip-path: polygon(33% 15%, 66% 15%, 81% 48%, 66% 86%, 32% 86%, 17% 49%);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 1s ease-out
+}
+
+.hexa4 {
+    clip-path: polygon(0 0, 100% 0, 100% 50%, 100% 100%, 0 100%, 0 50%);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 1s ease-out
 }
 
 .carousel-item {
@@ -231,10 +261,6 @@
     border: none;
     font-weight: 700;
     transition: 200ms ease-in-out;
-}
-
-.carousel-item .item button:hover {
-    background-color: red;
 }
 
 /* PART 4 */
@@ -330,7 +356,6 @@
 
 .part-6 .form-container .mt-1 {
     padding: 50px 0;
-    position: relative;
 }
 
 .part-6 .form-container .mt-1 h1 {
@@ -402,8 +427,13 @@
 
 }
 
-.part-6 .form-container button {
-    position: absolute;
+.up-btn {
+    display: none;
+}
+
+.show-up-btn {
+    display: block;
+    position: fixed;
     bottom: 50px;
     right: 50px;
     background-color: var(--blue-color);
@@ -411,7 +441,8 @@
     height: 50px;
     width: 50px;
     border: none;
-    z-index: 50;
+    z-index: 100;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.3);
 }
 
 /* PART 7 */
@@ -1010,4 +1041,8 @@
 
 .logo:nth-child(4) {
     transition-delay: 900ms;
+}
+
+.parent-curve {
+    filter: url(#parent-curve);
 }
