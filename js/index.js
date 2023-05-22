@@ -76,21 +76,21 @@ const circle = document.querySelector(".carousel");
 const handleScroll = function () {
   const scrollTop = window.pageYOffset;
 
-  if (scrollTop < 520) {
+  if (scrollTop < 500) {
     circle.classList.remove("hexa2");
 
     circle.classList.add("hexa1");
-  } else if (scrollTop < 720) {
+  } else if (scrollTop < 700) {
     circle.classList.remove("hexa1");
     circle.classList.remove("hexa3");
 
     circle.classList.add("hexa2");
-  } else if (scrollTop < 920) {
+  } else if (scrollTop < 900) {
     circle.classList.remove("hexa2");
     circle.classList.remove("hexa4");
 
     circle.classList.add("hexa3");
-  } else if (scrollTop < 1020) {
+  } else if (scrollTop < 1000) {
     circle.classList.remove("hexa3");
 
     circle.classList.add("hexa4");
