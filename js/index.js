@@ -75,6 +75,7 @@ const circle = document.querySelector(".carousel");
 
 const handleScroll = function () {
   const scrollTop = window.pageYOffset;
+  const parentHexa = document.querySelector("#the-parent");
 
   if (scrollTop < 500) {
     circle.classList.remove("hexa2");
@@ -90,10 +91,14 @@ const handleScroll = function () {
     circle.classList.remove("hexa4");
 
     circle.classList.add("hexa3");
+
+    parentHexa.classList.add("parent-curve");
   } else if (scrollTop < 1000) {
     circle.classList.remove("hexa3");
 
     circle.classList.add("hexa4");
+
+    parentHexa.classList.remove("parent-curve");
   }
 };
 

@@ -150,7 +150,7 @@
 }
 
 .hexa1 {
-    clip-path: polygon(40% 34%, 51% 34%, 56% 46%, 52% 59%, 40% 59%, 35% 46%);
+    clip-path: polygon(51% 36%, 69% 44%, 69% 61%, 52% 70%, 34% 62%, 34% 44%);
     height: 100%;
     width: 100%;
     position: absolute;
@@ -161,7 +161,7 @@
 }
 
 .hexa2 {
-    clip-path: polygon(38% 23%, 55% 23%, 62% 41%, 55% 61%, 39% 61%, 31% 41%);
+    clip-path: polygon(51% 26%, 65% 35%, 65% 57%, 51% 67%, 37% 57%, 37% 35%);
     height: 100%;
     width: 100%;
     position: absolute;
@@ -172,7 +172,7 @@
 }
 
 .hexa3 {
-    clip-path: polygon(33% 15%, 66% 15%, 81% 48%, 66% 86%, 32% 86%, 17% 49%);
+    clip-path: polygon(51% 14%, 82% 30%, 82% 68%, 50% 85%, 19% 68%, 19% 29%);
     height: 100%;
     width: 100%;
     position: absolute;
@@ -183,7 +183,7 @@
 }
 
 .hexa4 {
-    clip-path: polygon(0 0, 100% 0, 100% 50%, 100% 100%, 0 100%, 0 50%);
+    clip-path: polygon(50% 0%, 100% 0, 100% 100%, 50% 100%, 0 100%, 0 0);
     height: 100%;
     width: 100%;
     position: absolute;
@@ -237,7 +237,7 @@
     flex-direction: column;
     align-items: flex-end;
     justify-content: center;
-    width: 40%;
+    width: 50%;
 }
 
 .carousel-item .item h1 {
@@ -809,7 +809,6 @@
     padding: 30px;
     border-radius: 15px;
     height: 320px;
-    animation-duration: 300ms;
 }
 
 .part-9 .mt-1 ul li div {
@@ -818,6 +817,14 @@
     flex-direction: column;
     justify-content: center;
     align-items: start;
+}
+
+.part-9 .mt-1 ul li:nth-child(1) div {
+    margin-top: 25px;
+}
+
+.part-9 .mt-1 ul li:nth-child(4) div {
+    margin-top: 25px;
 }
 
 .part-9 .mt-1 ul li:hover {
